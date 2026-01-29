@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invabat - Premium Inverter Battery Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1e3a8a;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .call-button {
+            background-color: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .call-button:hover {
+            background-color: #d97706;
+            transform: translateY(-2px);
+        }
+
+        .main-header {
+            padding: 15px 0;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo h1 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 0;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 2.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a.active {
+            color: var(--primary);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 86, 219, 0.85), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Brands Section */
+        .brands {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .brand-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-gray);
+        }
+
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .brand-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .brand-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 60px 0;
+            background-color: #f1f5f9;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-img {
+            height: 200px;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-img i {
+            font-size: 4rem;
+            color: var(--primary);
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .product-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-features i {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: var(--primary-dark);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-features {
+            margin-top: 30px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .about-feature i {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: var(--secondary);
+            margin-top: 3px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Privacy Policy & Contact Pages */
+        .page-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .page-content {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .privacy-content, .contact-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-section, .contact-section {
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 86, 219, 0.2);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        /* Floating Call Button */
+        .floating-call {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .floating-call:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-contact {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .brands-grid, .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .floating-call {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span><i class="fas fa-map-marker-alt"></i> 123 Battery Street, Power City, PC 123456</span>
+                    <span><i class="fas fa-envelope"></i> info@invabat.com</span>
+                </div>
+                <a href="tel:8087804339" class="call-button">
+                    <i class="fas fa-phone-alt"></i> Call Us: 8087804339
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-car-battery"></i>
+                    <h1>Invabat</h1>
+                </div>
+                
+                <nav>
+                    <ul id="main-nav">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#brands">Brands</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                    <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Premium Inverter Battery Solutions</h2>
+            <p>Invabat provides high-quality inverter batteries from top brands like Exide, Microtek, Livfast, Amaze, Addo, Eastman and more. We also offer advanced lithium batteries for modern power needs.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-headset"></i> Get Free Consultation
+                </a>
+                <a href="#products" class="btn btn-secondary">
+                    <i class="fas fa-bolt"></i> View Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Trusted Brands</h2>
+                <p>We deal in top-quality battery and inverter brands in the industry</p>
+            </div>
+            
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>Exide</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Microtek</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-car-battery"></i>
+                    <h3>Livfast</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-charging-station"></i>
+                    <h3>Amaze</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-plug"></i>
+                    <h3>Addo</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Eastman</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Lithium Batteries</h3>
+                </div>
+                <div class="brand-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>BIS Certified</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>High-performance inverter batteries for residential and commercial use</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-battery-three-quarters"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Exide InvaMaster</h3>
+                        <p>Premium tubular battery with long backup and durability.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> 5-Year Warranty</li>
+                            <li><i class="fas fa-check"></i> Maintenance Free</li>
+                            <li><i class="fas fa-check"></i> High Backup Time</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Microtek Lithium</h3>
+                        <p>Advanced lithium battery with smart BMS for solar applications.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> 10+ Year Lifespan</li>
+                            <li><i class="fas fa-check"></i> Fast Charging</li>
+                            <li><i class="fas fa-check"></i> Lightweight Design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Livfast Home UPS</h3>
+                        <p>Reliable home inverter battery with excellent performance.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Deep Discharge Protection</li>
+                            <li><i class="fas fa-check"></i> Silent Operation</li>
+                            <li><i class="fas fa-check"></i> Affordable Pricing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Invabat</h2>
+                    <p>Invabat is a leading provider of inverter battery solutions, offering products from the most trusted brands in the industry. With over 15 years of experience, we have been powering homes and businesses with reliable energy backup solutions.</p>
+                    <p>We specialize in both traditional lead-acid batteries and modern lithium batteries, providing our customers with the best options for their specific needs and budgets.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>BIS Certified Products</h4>
+                                <p>All our products meet Bureau of Indian Standards for quality and safety.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Expert Installation</h4>
+                                <p>Professional installation services by trained technicians.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>24/7 Support</h4>
+                                <p>Round-the-clock customer support for all your queries and issues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Invabat Battery Installation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Invabat</h3>
+                    <p>Your trusted partner for premium inverter battery solutions. We provide quality products from top brands with expert installation and support.</p>
+                    <div class="contact-info" style="margin-top: 20px;">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Call Us:</strong>
+                                <p>8087804339</p>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#brands">Brands</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>123 Battery Street, Power City, PC 123456</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>8087804339</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@invabat.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
+                        <li>Saturday: 10:00 AM - 5:00 PM</li>
+                        <li>Sunday: 10:00 AM - 2:00 PM</li>
+                        <li>Emergency Services: 24/7 Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Invabat. All Rights Reserved. | Designed for Professional Inverter Battery Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <a href="tel:8087804339" class="floating-call">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- Privacy Policy Page (hidden by default) -->
+    <div id="privacy-policy-page" style="display: none;">
+        <section class="page-header">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>How we collect, use, and protect your information</p>
+            </div>
+        </section>
+        
+        <section class="page-content">
+            <div class="container">
+                <div class="privacy-content">
+                    <div class="privacy-section">
+                        <h2>Information We Collect</h2>
+                        <p>We collect information you provide directly to us, such as when you create an account, subscribe to our newsletter, respond to a survey, fill out a form, or otherwise communicate with us. This information may include your name, email address, phone number, and any other information you choose to provide.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>How We Use Your Information</h2>
+                        <p>We may use the information we collect to:</p>
+                        <ul>
+                            <li>Provide, maintain, and improve our services</li>
+                            <li>Respond to your comments, questions, and requests</li>
+                            <li>Send you technical notices, updates, security alerts, and support messages</li>
+                            <li>Communicate with you about products, services, offers, and events</li>
+                            <li>Monitor and analyze trends, usage, and activities in connection with our services</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>Information Sharing</h2>
+                        <p>We do not share, sell, rent, or trade your personal information with third parties for their commercial purposes. We may share information with vendors, consultants, and other service providers who need access to such information to carry out work on our behalf.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>Data Security</h2>
+                        <p>We take reasonable measures to help protect personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction. However, no internet or email transmission is ever fully secure or error-free.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>Changes to This Policy</h2>
+                        <p>We may change this privacy policy from time to time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h2>Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                        <p><strong>Invabat</strong><br>
+                        123 Battery Street, Power City, PC 123456<br>
+                        Phone: 8087804339<br>
+                        Email: info@invabat.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Us Page (hidden by default) -->
+    <div id="contact-page" style="display: none;">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our battery experts</p>
+            </div>
+        </section>
+        
+        <section class="page-content">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-section">
+                        <h2>Our Contact Information</h2>
+                        <p>We're here to help you with all your inverter battery needs. Feel free to reach out to us through any of the following channels:</p>
+                        
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address</strong>
+                                    <p>123 Battery Street, Power City, PC 123456</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <strong>Phone Number</strong>
+                                    <p>8087804339</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email Address</strong>
+                                    <p>info@invabat.com</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Business Hours</strong>
+                                    <p>Monday - Friday: 9:00 AM - 7:00 PM<br>
+                                    Saturday: 10:00 AM - 5:00 PM<br>
+                                    Sunday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you as soon as possible. For immediate assistance, call us at 8087804339.</p>
+                        
+                        <div class="contact-form">
+                            <form id="whatsapp-form">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="battery-type">Battery/Inverter Type Interested In</label>
+                                    <select id="battery-type" class="form-control">
+                                        <option value="">Select an option</option>
+                                        <option value="Exide">Exide</option>
+                                        <option value="Microtek">Microtek</option>
+                                        <option value="Livfast">Livfast</option>
+                                        <option value="Amaze">Amaze</option>
+                                        <option value="Addo">Addo</option>
+                                        <option value="Eastman">Eastman</option>
+                                        <option value="Microtek Lithium">Microtek Lithium</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i> Submit via WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>

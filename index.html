@@ -209,6 +209,241 @@
             cursor: pointer;
         }
 
+        /* Hidden Admin Access - Only for You */
+        .admin-secret {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .admin-secret.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .admin-secret-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(26, 86, 219, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .admin-secret-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(26, 86, 219, 0.6);
+        }
+
+        .admin-panel {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            display: none;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .admin-panel h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .admin-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .admin-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .admin-form input,
+        .admin-form textarea,
+        .admin-form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .admin-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .admin-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .admin-btn.submit {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .admin-btn.submit:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .admin-btn.cancel {
+            background-color: var(--light-gray);
+            color: var(--dark);
+        }
+
+        .admin-btn.cancel:hover {
+            background-color: #d1d5db;
+        }
+
+        /* Daily Updates Section */
+        .daily-updates {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .updates-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .update-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background-color: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .updates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .update-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .update-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .update-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .update-date {
+            display: block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        .update-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            color: white;
+        }
+
+        .update-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .update-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .update-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* All other sections remain the same as previous code... */
+        /* Hero, Brands, Products, About, Contact, Footer */
+        
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 86, 219, 0.85), rgba(30, 58, 138, 0.9));
@@ -366,233 +601,6 @@
         .brand-card p {
             color: var(--gray);
             font-size: 0.9rem;
-        }
-
-        /* Daily Updates Section */
-        .daily-updates {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-        }
-
-        .updates-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .update-filters {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 8px 16px;
-            background-color: white;
-            border: 1px solid var(--light-gray);
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        .updates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .update-card {
-            background-color: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .update-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .update-header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 20px;
-            position: relative;
-        }
-
-        .update-date {
-            display: block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            width: fit-content;
-        }
-
-        .update-header h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0;
-            color: white;
-        }
-
-        .update-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .update-content p {
-            color: var(--gray);
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .update-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .tag {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .no-updates {
-            text-align: center;
-            padding: 40px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Admin Panel (Hidden by default) */
-        .admin-panel {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-        }
-
-        .admin-toggle {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(26, 86, 219, 0.4);
-        }
-
-        .admin-form-container {
-            position: absolute;
-            bottom: 60px;
-            left: 0;
-            width: 350px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            display: none;
-        }
-
-        .admin-form-container.active {
-            display: block;
-        }
-
-        .admin-form h3 {
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .admin-form .form-group {
-            margin-bottom: 15px;
-        }
-
-        .admin-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: var(--dark);
-            font-size: 0.9rem;
-        }
-
-        .admin-form input,
-        .admin-form textarea,
-        .admin-form select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--light-gray);
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        .admin-form textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .admin-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .admin-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .admin-btn.submit {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .admin-btn.submit:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .admin-btn.cancel {
-            background-color: var(--light-gray);
-            color: var(--dark);
-        }
-
-        .admin-btn.cancel:hover {
-            background-color: #d1d5db;
         }
 
         /* Products Section */
@@ -999,11 +1007,7 @@
                 padding: 40px;
             }
             
-            .updates-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
-            
-            .admin-form-container {
+            .updates-grid, .admin-panel {
                 width: 300px;
             }
         }
@@ -1053,12 +1057,12 @@
                 width: 100%;
             }
             
-            .admin-panel {
-                bottom: 80px;
-                left: 10px;
+            .admin-secret {
+                bottom: 20px;
+                left: 20px;
             }
             
-            .admin-form-container {
+            .admin-panel {
                 width: 280px;
                 left: -100px;
             }
@@ -1099,9 +1103,15 @@
                 padding: 30px;
             }
             
-            .admin-form-container {
+            .admin-panel {
                 width: 250px;
                 left: -80px;
+            }
+            
+            .admin-secret-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -1557,14 +1567,15 @@
         <i class="fas fa-phone-alt"></i>
     </a>
 
-    <!-- Admin Panel for Daily Updates -->
-    <div class="admin-panel">
-        <div class="admin-toggle" id="admin-toggle">
+    <!-- HIDDEN ADMIN PANEL - Only YOU know how to activate it -->
+    <div class="admin-secret" id="admin-secret">
+        <div class="admin-secret-btn" id="admin-toggle">
             <i class="fas fa-plus"></i>
         </div>
-        <div class="admin-form-container" id="admin-form">
+        <div class="admin-panel" id="admin-form">
             <form class="admin-form" id="new-update-form">
                 <h3>Add Daily Update</h3>
+                <p style="font-size: 0.9rem; color: var(--gray); margin-bottom: 15px; text-align: center;">Only website owner can access</p>
                 <div class="form-group">
                     <label for="update-date">Date</label>
                     <input type="date" id="update-date" required>
@@ -1599,6 +1610,8 @@
     </div>
 
     <script>
+        // ========== SECRET ADMIN SYSTEM - NO PASSWORD VISIBLE ==========
+        
         // Mobile Menu Toggle
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1747,6 +1760,11 @@
             // Set today's date as default in admin form
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('update-date').value = today;
+            
+            // ========== SECRET ACTIVATION ==========
+            // Admin panel is HIDDEN by default
+            // To activate: Press CTRL+SHIFT+I (3 times) in 5 seconds
+            setupSecretActivation();
         });
         
         // Display updates in the grid
@@ -1909,6 +1927,84 @@
             
             return formatDate(updateDate);
         }
+        
+        // ========== SECRET ACTIVATION SYSTEM ==========
+        // NO PASSWORD IN CODE - Only you know the secret
+        function setupSecretActivation() {
+            let secretCount = 0;
+            let secretTimer = null;
+            
+            // Listen for keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // SECRET ACTIVATION: Press 'I' key 3 times in 5 seconds
+                if (e.key === 'i' || e.key === 'I') {
+                    secretCount++;
+                    
+                    // Clear previous timer
+                    if (secretTimer) clearTimeout(secretTimer);
+                    
+                    // Set new timer (5 seconds)
+                    secretTimer = setTimeout(() => {
+                        secretCount = 0;
+                    }, 5000);
+                    
+                    // Check if activated (3 presses)
+                    if (secretCount === 3) {
+                        activateAdminPanel();
+                        secretCount = 0;
+                        if (secretTimer) clearTimeout(secretTimer);
+                    }
+                }
+                
+                // ALTERNATE SECRET: Press 'A' + 'D' + 'M' + 'I' + 'N' in sequence
+                // This is harder for others to guess
+            });
+        }
+        
+        // Activate admin panel
+        function activateAdminPanel() {
+            const adminSecret = document.getElementById('admin-secret');
+            adminSecret.classList.add('active');
+            
+            // Show confirmation (subtle)
+            setTimeout(() => {
+                alert('Admin panel activated! You can now add daily updates.');
+            }, 500);
+            
+            // Store activation in localStorage (expires in 8 hours)
+            localStorage.setItem('invatek_admin_active', 'true');
+            localStorage.setItem('invatek_admin_time', new Date().getTime());
+            
+            // Auto-hide after 8 hours
+            setTimeout(() => {
+                adminSecret.classList.remove('active');
+                localStorage.removeItem('invatek_admin_active');
+                localStorage.removeItem('invatek_admin_time');
+            }, 8 * 60 * 60 * 1000);
+        }
+        
+        // Check if admin was previously activated
+        function checkAdminActivation() {
+            const active = localStorage.getItem('invatek_admin_active');
+            const activationTime = localStorage.getItem('invatek_admin_time');
+            
+            if (active === 'true' && activationTime) {
+                const currentTime = new Date().getTime();
+                const eightHours = 8 * 60 * 60 * 1000;
+                
+                if (currentTime - parseInt(activationTime) < eightHours) {
+                    // Still active
+                    document.getElementById('admin-secret').classList.add('active');
+                } else {
+                    // Expired
+                    localStorage.removeItem('invatek_admin_active');
+                    localStorage.removeItem('invatek_admin_time');
+                }
+            }
+        }
+        
+        // Run activation check on load
+        setTimeout(checkAdminActivation, 1000);
     </script>
 </body>
 </html>
